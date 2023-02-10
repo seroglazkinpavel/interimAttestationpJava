@@ -1,2 +1,2 @@
-# interimAttestationpJava
+# interimAttestationJava
 Java-project
