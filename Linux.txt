@@ -1,0 +1,109 @@
+1) Используйте команду cat операционной системы Linux и создайте две
+директории файла Игрушки для школьников, заполнив директорию
+роботы, конструктор, настольные игры и Игрушки для дошколят
+заполнив директорию мягкими игрушками, куклами, машинками,
+2) Объединить директории да директории имя игрушки. Просмотреть
+содержимое созданного файла.
+2) Объединить директории да директории имя игрушки. Просмотреть
+содержимое созданного файла.
+3) Переименовать директорию, дав ему новое имя (Игрушки).
+
+pavel@pavel-VirtualBox:~$ cd /home/pavel/Документы
+pavel@pavel-VirtualBox:~/Документы$ mkdir atestation_java
+pavel@pavel-VirtualBox:~/Документы$ ls -l
+итого 4
+drwxrwxr-x 2 pavel pavel 4096 фев 13 13:51 atestation_java
+pavel@pavel-VirtualBox:~/Документы$ cd atestation_java
+pavel@pavel-VirtualBox:~/Документы/atestation_java$ cat > schoolboy
+роботы
+конструктор
+настольные игры
+pavel@pavel-VirtualBox:~/Документы/atestation_java$ ls -l
+итого 4
+-rw-rw-r-- 1 pavel pavel 65 фев 13 13:58 schoolboy
+pavel@pavel-VirtualBox:~/Документы/atestation_java$ cat schoolboy
+роботы
+конструктор
+настольные игры
+pavel@pavel-VirtualBox:~/Документы/atestation_java$ cat > preschooler
+мягеие игрушки
+куклы
+машины
+pavel@pavel-VirtualBox:~/Документы/atestation_java$ ls -l
+итого 8
+-rw-rw-r-- 1 pavel pavel 52 фев 13 14:03 preschooler
+-rw-rw-r-- 1 pavel pavel 65 фев 13 13:58 schoolboy
+pavel@pavel-VirtualBox:~/Документы/atestation_java$ cat preschooler
+мягеие игрушки
+куклы
+машины
+pavel@pavel-VirtualBox:~/Документы/atestation_java$ cat preschooler schoolboy
+мягеие игрушки
+куклы
+машины
+роботы
+конструктор
+настольные игры
+
+Переименование файла
+
+pavel@pavel-VirtualBox:~/Документы/atestation_java$ cat preschooler schoolboy > Toys
+pavel@pavel-VirtualBox:~/Документы/atestation_java$ cat Toys
+мягеие игрушки
+куклы
+машины
+роботы
+конструктор
+настольные игры
+
+Переименование директории
+
+pavel@pavel-VirtualBox:~/Документы/atestation_java$ cd /home/pavel
+pavel@pavel-VirtualBox:~$ mv ~/Документы/atestation_java ~/Документы/Tous
+pavel@pavel-VirtualBox:~$ cd /home/pavel/Документы
+pavel@pavel-VirtualBox:~/Документы$ ls -l
+итого 4
+drwxrwxr-x 2 pavel pavel 4096 фев 13 14:16 Tous
+pavel@pavel-VirtualBox:~/Документы$ cd Toys
+-bash: cd: Toys: Нет такого файла или каталога
+pavel@pavel-VirtualBox:~/Документы$ cd Tous
+pavel@pavel-VirtualBox:~/Документы/Tous$ ls -l
+итого 12
+-rw-rw-r-- 1 pavel pavel  52 фев 13 14:03 preschooler
+-rw-rw-r-- 1 pavel pavel  65 фев 13 13:58 schoolboy
+-rw-rw-r-- 1 pavel pavel 117 фев 13 14:16 Toys
+
+3. Установить и удалить snap-пакет. (gimp)
+
+pavel@pavel-VirtualBox:~/Документы/Tous$ cd /home/pavel
+
+pavel@pavel-VirtualBox:~$ sudo snap install gimp
+pavel@pavel-VirtualBox:~$ sudo snap list
+pavel@pavel-VirtualBox:~$ gimp
+pavel@pavel-VirtualBox:~$ sudo snap remove gimp
+pavel@pavel-VirtualBox:~$ sudo snap list
+
+5) Добавить задачу для выполнения каждые 3 минуты (запись во все
+файлы).
+
+pavel@pavel-VirtualBox:~$ date
+Пн 13 фев 2023 15:22:57 +03
+pavel@pavel-VirtualBox:~$ mkdir mydir
+pavel@pavel-VirtualBox:~$ ls -l
+итого 52
+drwxrwxr-x 4 pavel pavel 4096 янв 17 21:11  lesson8
+drwxrwxr-x 2 pavel pavel 4096 фев 13 15:26  mydir
+drwx------ 4 pavel pavel 4096 дек 28 20:02  snap
+-rw-rw-r-- 1 pavel pavel   37 янв 18 15:04  test_script
+drwxrwxr-x 4 pavel pavel 4096 янв 16 21:43  wordpress
+drwxr-xr-x 2 pavel pavel 4096 дек 28 19:57  Видео
+drwxr-xr-x 3 pavel pavel 4096 фев 13 14:54  Документы
+drwxr-xr-x 2 pavel pavel 4096 дек 28 19:57  Загрузки
+drwxr-xr-x 3 pavel pavel 4096 янв 19 08:43  Изображения
+drwxr-xr-x 2 pavel pavel 4096 дек 28 19:57  Музыка
+drwxr-xr-x 2 pavel pavel 4096 дек 28 19:57  Общедоступные
+drwxr-xr-x 2 pavel pavel 4096 дек 28 19:57 'Рабочий стол'
+drwxr-xr-x 2 pavel pavel 4096 дек 28 19:57  Шаблоны
+pavel@pavel-VirtualBox:~$ date > mydir/mydate
+pavel@pavel-VirtualBox:~$ cat mydir/mydate
+Пн 13 фев 2023 15:30:44 +03
